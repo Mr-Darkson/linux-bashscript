@@ -4,6 +4,15 @@
 #export LENGTH=10
 #export WIDTH=10
 
+print_help() {
+echo "Create the local variables like an export LENGTH = 10 or export WIDTH = 10."
+echo "You also can define the starter value in script"
+}
+
+if [ "$1" == "-h" ] || [ "$1" == "--help" ];then
+print_help
+exit 0
+fi
 
 # Check existence of variables
 if [ -z "$LENGTH" ] || [ -z "$WIDTH" ]; then
